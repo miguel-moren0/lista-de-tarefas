@@ -1,0 +1,196 @@
+/* geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #272a22;
+  color: #272a22;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1000 1000'%3E%3Cpath d='M0,200 Q250,300 500,200 T1000,200' stroke='%23ccc' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M0,500 Q250,600 500,500 T1000,500' stroke='%23888' stroke-width='1' fill='none' opacity='0.08'/%3E%3Cpath d='M0,800 Q250,700 500,800 T1000,800' stroke='%23666' stroke-width='1' fill='none' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.app {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px;
+  padding: 20px;
+  background: #e0d9c9;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-box {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #00000000;
+  border-radius: 25px 0 0 25px;
+  background-color: #f0e8d7;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-box input:focus {
+  border-color: #667eea;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(45deg, #5ea840, #68bd47);
+  color: white;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.input-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.filtros {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.filter-btn {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn.active[data-filter="all"] {
+  background: #db5445;
+  color: white;
+  font-weight: bold;
+}
+
+.filter-btn.active[data-filter="pending"] {
+  background: #f88221;
+  color: white;
+  font-weight: bold;
+}
+
+.filter-btn.active[data-filter="completed"] {
+  background: #68bd47;
+  color: white;
+  font-weight: bold;
+}
+
+/* tarefas */
+.task-counter {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.task-list .task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+}
+
+.task-item.completed {
+  background: #d4f4e0;  
+  color: #4caf50;  
+  opacity: 1;  
+}
+
+.task-item.completed .task-content span::before {
+  color: #4caf50; 
+  margin-right: 8px;
+}
+
+.task-content input.check {
+  margin-right: 10px;
+}
+
+/* remover tarefa */
+.remove-btn {
+  background: #e74c3c;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
+
+#emptyState {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+#emptyState .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ff2626; 
+}
+
+/* responsividade */
+@media (max-width: 600px) {
+  .app {
+    width: 100%;
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .task-list .task-item {
+    padding: 10px 12px;
+  }
+
+  .input-box input, .input-box button {
+    font-size: 14px;
+  }
+}
