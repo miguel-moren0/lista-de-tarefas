@@ -55,8 +55,9 @@ Ele permite adicionar, marcar como concluídas, filtrar e remover tarefas, além
 
 ## 📸 Demonstração (Exemplo)
 
-Você pode acessar a o site clicando [aqui](https://miguel-moren0.github.io/lista-de-tarefas/)
+https://github.com/user-attachments/assets/54ed6260-2ea8-439f-9a29-a2c6188b7bce
 
+Você pode acessar a o site clicando [aqui](https://miguel-moren0.github.io/lista-de-tarefas/)
 ---
 
 ## 📜 Licença
